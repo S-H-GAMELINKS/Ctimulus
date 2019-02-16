@@ -25,7 +25,7 @@ int main() {
 
     httplib::Server svr;
 
-    std::array<std::string, 3> routes = {"/", "/about", "/contact"};
+    std::array<std::string, 1> routes = {"/"};
 
     std::string body = LoadAssets("./assets/index.html");
 
