@@ -1,9 +1,11 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-    static targets = ["content", "preview"]
+    static get targets() {
+        return [ "content", "preview" ]
+    }
 
     content() {
-        this.previewTarget.value = this.contentTarget.value
+        this.previewTarget.innerHTML = this.contentTarget.value
     }
 }
